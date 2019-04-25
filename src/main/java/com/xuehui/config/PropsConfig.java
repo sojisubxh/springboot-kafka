@@ -46,4 +46,10 @@ public class PropsConfig {
 
     @Value("${spring.kafka.consumer.auto-offset-reset}")
     private String autoOffsetReset;
+
+    @Value("${spring.kafka.producer.batch-size}")
+    private String batchSize;
+
+    @Value("${spring.kafka.producer.buffer-memory}")
+    private String bufferMemory;
 }
