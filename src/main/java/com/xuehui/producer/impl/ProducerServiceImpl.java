@@ -46,6 +46,7 @@ public class ProducerServiceImpl implements ProducerService {
         for (int i = 0; i < count; i++) {
 //            template.send(topic, str);
             template.send(topic, "1", str);
+//            template.send(topic, 2, "1", str);
         }
     }
 

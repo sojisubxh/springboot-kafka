@@ -107,17 +107,17 @@ public class MyListener {
 
     /**
      * 监听topic,批量消费
-     *//*
+     */
     @KafkaListener(topics = TPOIC)
     public void listen(List<ConsumerRecord<String, String>> records) {
         batchConsumer(records);
-    }*/
+    }
 
     /**
      * 单条消费
      */
     private void consumer(ConsumerRecord<String, String> record) {
-        logger.info("主题:{}, 内容: {}", record.topic(), record.value());
+        logger.info("主题:{}, 内容: {}, 分区: {}", record.topic(), record.value(), record.partition());
     }
 
     /**
